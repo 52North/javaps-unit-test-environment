@@ -15,43 +15,19 @@
  * limitations under the License.
  */
 package org.n52.javaps.test;
-import java.io.File;
+import java.io.InputStream;
 
-import org.junit.Before;
 import org.junit.runner.RunWith;
 import org.n52.javaps.io.AbstractInputOutputHandler;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration("classpath:components/*.xml")
-public abstract class AbstractTestCase<T extends AbstractInputOutputHandler> {
+public abstract class AbstractTestCase {
 
-    protected static final Logger LOGGER = LoggerFactory.getLogger(AbstractTestCase.class);
-
-    protected String projectRoot;
-
-    protected T dataHandler;
-
-    public AbstractTestCase() {
-
-        File f = new File(this.getClass().getProtectionDomain().getCodeSource()
-                 .getLocation().getFile());
-                 projectRoot = f.getParentFile().getParentFile().getParent();
-
+    protected InputStream getResource(String name) {
+        return getClass().getClassLoader().getResourceAsStream(name);
     }
-
-    @Before
-    public void setUp(){
-        initializeDataHandler();
-    }
-
-    protected boolean isDataHandlerActive(){
-        return true;
-    }
-
-    protected abstract void initializeDataHandler();
 
 }
