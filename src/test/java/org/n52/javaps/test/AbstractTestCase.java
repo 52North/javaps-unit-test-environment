@@ -18,7 +18,6 @@ package org.n52.javaps.test;
 import java.io.InputStream;
 
 import org.junit.runner.RunWith;
-import org.n52.javaps.io.AbstractInputOutputHandler;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
