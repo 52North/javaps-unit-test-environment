@@ -27,7 +27,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.n52.geoprocessing</groupId>
 	<artifactId>javaps-unit-test-environment</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1-SNAPSHOT</version>
 	<name>Abstract class and spring setup for javaPS unit tests</name>
 
 	<inceptionYear>2018</inceptionYear>
