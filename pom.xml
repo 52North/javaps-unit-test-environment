@@ -1,6 +1,6 @@
 <!--
 
-    Copyright 2019 52°North Initiative for Geospatial Open Source
+    Copyright 2020 52°North Initiative for Geospatial Open Source
     Software GmbH
 
     Licensed under the Apache License, Version 2.0 (the "License");
@@ -25,7 +25,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.n52.geoprocessing</groupId>
 	<artifactId>javaps-unit-test-environment</artifactId>
-	<version>1</version>
+	<version>2-SNAPSHOT</version>
 	<name>Abstract class and spring setup for javaPS unit tests</name>
 
 	<inceptionYear>2018</inceptionYear>
@@ -52,7 +52,7 @@
 		<hamcrest.all.version>1.3</hamcrest.all.version>
 		<xml.apis.version>1.4.01</xml.apis.version>
 		<spring.version>5.1.3.RELEASE</spring.version>
-		<currentYear>2018</currentYear> <!-- manual setting -->
+		<currentYear>2020</currentYear> <!-- manual setting -->
 		<maven.build.timestamp.format>yyyy</maven.build.timestamp.format>
 		<currentYearDynamic>${maven.build.timestamp}</currentYearDynamic>
 	</properties>
@@ -61,7 +61,7 @@
 		<url>https://github.com/52North/javaps-unit-test-environment</url>
 		<connection>scm:git:git://github.com/52North/javaps-unit-test-environment.git</connection>
 		<developerConnection>scm:git:ssh://git@github.com/52North/javaps-unit-test-environment.git</developerConnection>
-		<tag>v1</tag>
+		<tag>HEAD</tag>
 	</scm>
 
 	<issueManagement>
@@ -217,7 +217,7 @@
 					</includes>
 					<strictCheck>true</strictCheck>
 					<properties>
-						<year>2019</year>
+						<year>${currentYear}</year>
 					</properties>
 					<mapping>
 						<java>SLASHSTAR_STYLE</java>
